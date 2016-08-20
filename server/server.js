@@ -25,8 +25,3 @@ app.listen(port, function(){
 app.get('/findBrewery', function(req, res){
   res.send(req.body);
 })
-
-
-// app.get('/', function(req, res) {
-//   res.send('hello world');
-// });
