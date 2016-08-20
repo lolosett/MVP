@@ -1,8 +1,9 @@
 //require all needed modules
 var express = require('express');
 var bodyParser = require('body-parser');
-var cors = require('cors')
+var cors = require('cors');
 var app = express();
+var _ = require('underscore');
 
 var model = require('./models/brewery.model.js')
 
@@ -24,7 +25,33 @@ app.get('/findBrewery', function(req, res){
   //query => {location: Santa Monica}
   model.brew.get(req.query)
     .then(function(data) {
-      res.status(200).send(data)
+      //filter out objects with no name && website
+      var results = _.filter(data.data, function(val){
+        //return objects with name or website
+        if(val.name === "Main Brewery") {
+          if (val.hasOwnProperty('website')){
+            return true;
+          }
+          return false;
+        }
+        return true;
+      }).map(function(item){
+        //add a display property to each item
+        if (item.name === "Main Brewery") {
+          item.display = item.website
+        } else {
+          item.display = item.name
+        }
+
+        return item
+      })
+
+
+
+
+
+
+      res.status(200).send(results)
     })
     .catch(function(error) {
       res.status(400).send(error);

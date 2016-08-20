@@ -22,7 +22,17 @@
           <input type="submit" id="submit" value="Submit" />
  -->
           <ul>
-            <li ng-repeat = "breweries in breweryToDisplay">{{breweries.name}}</li>
+            <!-- figure out how to omit "main brewery" -->
+            <!-- <li ng-repeat = "breweries in breweryToDisplay">{{breweries.display}}</li> -->
+            <div ng-repeat = "item in breweryToDisplay">
+              <h1>
+                  {{item.name}}
+              </h1>
+
+              <h2>
+                  {{item.display}}
+              </h2>
+            </div>
           </ul>
       </section>
   </body>
