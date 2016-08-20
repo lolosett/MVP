@@ -20,7 +20,7 @@ function brewGet(params) {
   //pass in user query as the param
   var query = {
     key : '999e6f628210e6871d4589b40ff9c2fa',
-    locality: 'Portland'
+    locality: params.input
   }
 
   return new Promise(function(resolve, reject) {

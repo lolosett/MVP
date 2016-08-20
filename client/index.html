@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html ng-app="app">
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
+    <script src="./app/app.js"></script>
     <section ng-controller = 'brewController'>
       <form ng-submit="submit()">
         <input type="text" ng-model = "userSearch">
@@ -20,9 +22,8 @@
           <input type="submit" id="submit" value="Submit" />
  -->
           <ul>
-            <li ng-toRepeat = "breweries in breweryToDisplay">{{brewery.name}}</li>
+            <li ng-repeat = "breweries in breweryToDisplay">{{breweries.name}}</li>
           </ul>
       </section>
-  <script src="app/app.js"></script>
   </body>
 </html>
