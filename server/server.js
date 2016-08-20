@@ -18,6 +18,8 @@ var port = process.env.PORT || 1337;
 app.use(express.static('./client'))
 
 //check to see if server is running on server file
+
+//in client figure out how to make a call to /findBrewery
 app.get('/findBrewery', function(req, res){
   //query => {location: Santa Monica}
   model.brew.get(req.query)

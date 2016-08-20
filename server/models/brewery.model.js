@@ -17,7 +17,6 @@ exports.brew = {
 
 
 function brewGet(params) {
-  console.log('inside brewGet brewery.model.js');
   //pass in user query as the param
   var query = {
     key : '999e6f628210e6871d4589b40ff9c2fa',

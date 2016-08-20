@@ -1,20 +1,33 @@
 angular
   .module('app', [])
-  .config(config)
-//download snippets for angular google search atom snippets for angular and it will tell you how to include these snippets
-  function config ($stateProvider, $urlRouterProvider, $httpProvider){
-    //google state provider and urlRouterProvider
-    $stateProvider
-    //creating state called home
-    .state('home', {
-      url: '/home',
-      //create this folder path, which will create our view
-      templateUrl: '../pages/index.html',
-      controller: 'HomeController'
+  //factory makes the http request to server to find the list of breweries
+    //will use user query as param
+
+
+  .factory('searchBrewery', function($http){
+    var getBreweryList = $http.get()
+      .then(function(response){
+        console.log(response)
+        return(response)
+      })
+      .catch(error) {
+        response.status(404).send('error: ', error)
+      }
+
+
+    return {
+      getBreweryList: getBreweryList
+      response: response
+    }
+
+  })
+
+
+
+  //controller uses $scope obj, which can be utilized to render the HTML
+.controller('brewController', function ($scope, searchBrewery){
+  searchBrewery.getBreweryList()
+    .then(function(response) {
+      $scope.breweryToDisplay = response;
     })
-
-    $urlRouterProvider
-    //this sets up a default route
-      .otherwise('/home')
-
-  }
+})

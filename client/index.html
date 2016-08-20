@@ -5,7 +5,24 @@
     <title></title>
   </head>
   <body>
-    <input type="text" ng-model = "userSearch">
+    <section ng-controller = 'brewController'>
+      <form ng-submit="submit()">
+        <input type="text" ng-model = "userSearch">
+        <input type="submit" id="submit" value="Submit">
+      </form>
+
+
+
+      <!--
+        <form ng-submit="submit()" ng-controller="ExampleController">
+          Enter text and hit enter:
+          <input type="text" ng-model="breweryModel" name="text" />
+          <input type="submit" id="submit" value="Submit" />
+ -->
+          <ul>
+            <li ng-toRepeat = "breweries in breweryToDisplay">{{brewery.name}}</li>
+          </ul>
+      </section>
   <script src="app/app.js"></script>
   </body>
 </html>
