@@ -1,4 +1,5 @@
 var model = require('../models/brewery.model.js')
+
 exports.getBrewery = {
     get: getBrewery
 }
