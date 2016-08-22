@@ -1,5 +1,5 @@
 body {
-  font-family: "Arial", Arial, sans-serif;
+  font-family: 'Poiret One', cursive;
 }
 
 
@@ -23,7 +23,7 @@ h1 {
 }
 
 #description {
-  font-size: small;
+  font-size: medium;
 }
 
 .brewery-name {
