@@ -2,27 +2,31 @@
 <html ng-app="app">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="brewfinder.css">
     <meta charset="utf-8">
     <title></title>
   </head>
+  <!-- HOPPYNESS IS ONE CLICK AWAY -->
   <body>
     <script src="./app/app.js"></script>
-    <section ng-controller = 'brewController'>
+    <section class="main" ng-controller = 'brewController'>
       <form ng-submit="submit()">
         <input type="text" ng-model = "userSearch">
         <input type="submit" id="submit" value="Submit">
       </form>
-          <ul>
-
             <div ng-repeat = "item in breweryToDisplay">
-              <h1>
-                  <!-- {{item.name}} -->
-                  {{item.display}}
-              </h1>
+              <ul id ="list">
 
-              <a href="#">{{item.website}}</a>
+                  <h2 class="brewery-name">{{item.display}}</h2>
+
+                <div>
+                    <p id = "description">{{item.brewery.description}}</p>
+                </div>
+                <div>
+                  <a href= '{{item.website}}'>view site</a>
+                </div>
+              </ul>
             </div>
-          </ul>
       </section>
   </body>
 </html>

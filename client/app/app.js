@@ -29,7 +29,8 @@ angular
   //controller uses $scope obj, which can be utilized to render the HTML
 .controller('brewController', function ($scope, searchBrewery){
 
-  $scope.userSearch = 'portland'
+  $scope.userSearch = 'Portland'
+
   $scope.submit = function(){
     console.log("inside submit");
     searchBrewery.getBreweryList($scope.userSearch)
@@ -37,5 +38,9 @@ angular
       $scope.breweryToDisplay = response;
     })
   }
+
+  $scope.go = function ( website ) {
+  $location.path( website );
+};
 
 })

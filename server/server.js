@@ -22,7 +22,6 @@ app.use(express.static('./client'))
 
 //in client figure out how to make a call to /findBrewery
 app.get('/findBrewery', function(req, res){
-  //query => {location: Santa Monica}
   model.brew.get(req.query)
     .then(function(data) {
       //filter out objects with no name && website
@@ -45,11 +44,6 @@ app.get('/findBrewery', function(req, res){
 
         return item
       })
-
-
-
-
-
 
       res.status(200).send(results)
     })
