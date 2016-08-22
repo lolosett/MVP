@@ -9,8 +9,10 @@
   <!-- HOPPYNESS IS ONE CLICK AWAY -->
   <body>
     <script src="./app/app.js"></script>
+
+    <h1>brewfinder</h1>
     <section class="main" ng-controller = 'brewController'>
-      <form ng-submit="submit()">
+      <form id ='inputForm' ng-submit="submit()">
         <input type="text" ng-model = "userSearch">
         <input type="submit" id="submit" value="Submit">
       </form>

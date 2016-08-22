@@ -1,11 +1,29 @@
+body {
+  font-family: "Arial", Arial, sans-serif;
+}
 
 
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 100px;
+  height: 100px;
+  background-image: url("http://www.freewebheaders.com/wordpress/wp-content/gallery/liquids-headers/beautiful-beer-foam-and-bubbles-background-header.jpg");
+  background-repeat: no-repeat
+}
 
 .main {
   text-align: center;
   max-width: 90%
 }
 
+#inputForm {
+  text-align: left;
+}
+
+#description {
+  font-size: small;
+}
 
 .brewery-name {
   font-size: large;
