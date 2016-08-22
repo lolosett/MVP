@@ -12,7 +12,7 @@
     <h1>brewfinder</h1>
     <section class="main" ng-controller = 'brewController'>
       <form id ='inputForm' ng-submit="submit()">
-        <input type="text" ng-model = "userSearch">
+        <input type="text" ng-model = "userSearch" placeholder="enter a city">
         <input type="submit" id="submit" value="Submit">
       </form>
             <div ng-repeat = "item in breweryToDisplay | filter: userSearch">

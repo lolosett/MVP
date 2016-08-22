@@ -29,8 +29,6 @@ angular
   //controller uses $scope obj, which can be utilized to render the HTML
 .controller('brewController', function ($scope, searchBrewery){
 
-  $scope.userSearch = 'Portland'
-
   $scope.submit = function(){
     console.log("inside submit");
     searchBrewery.getBreweryList($scope.userSearch)
