@@ -16,7 +16,7 @@
         <input type="text" ng-model = "userSearch">
         <input type="submit" id="submit" value="Submit">
       </form>
-            <div ng-repeat = "item in breweryToDisplay">
+            <div ng-repeat = "item in breweryToDisplay | filter: userSearch">
               <ul id ="list">
 
                   <h2 class="brewery-name">{{item.display}}</h2>
