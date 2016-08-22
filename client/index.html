@@ -24,7 +24,7 @@
                 <div>
                     <p id = "description">{{item.brewery.description}}</p>
                 </div>
-                <div>
+                <div ng-if = item.website>
                   <a href= '{{item.website}}'>view site</a>
                 </div>
               </ul>
