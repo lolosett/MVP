@@ -8,8 +8,9 @@ h1 {
   color: white;
   font-size: 100px;
   height: 100px;
+  max-width: 100%;
   background-image: url("http://www.freewebheaders.com/wordpress/wp-content/gallery/liquids-headers/beautiful-beer-foam-and-bubbles-background-header.jpg");
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
 }
 
 .main {
