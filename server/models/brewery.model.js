@@ -1,7 +1,4 @@
 var request = require('request');
-var BreweryDb = require('brewerydb-node');
-var brewdb = new BreweryDb('999e6f628210e6871d4589b40ff9c2fa');
-
 
 var qs = require('querystring')
 
