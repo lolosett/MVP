@@ -1,8 +1,5 @@
 ## Heading ##
   brewfinder --  "Hoppyness is one search away!"
-
-## Sub-Heading ##
-  For those who need to find a brewery STADT!
  
 ## Summary ##
   Brewfinder allows the user to search for breweries in their city.
